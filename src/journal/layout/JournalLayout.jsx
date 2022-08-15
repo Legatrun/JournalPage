@@ -9,19 +9,20 @@ export const JournalLayout = ({ children }) => {
   return (
     <Box sx={{ display: 'flex' }}>
 
-        <NavBar drawerWidth={ drawerWidth } />
+      <NavBar drawerWidth={drawerWidth} />
 
-        <SideBar drawerWidth={ drawerWidth } />
+      <SideBar drawerWidth={drawerWidth} />
 
-        <Box 
-            component='main'
-            sx={{ flexGrow: 1, p: 3 }}
-        >
-            <Toolbar />
+      <Box
+        className='animate__animated animate__fadeIn animate__faster'
+        component='main'
+        sx={{ flexGrow: 1, p: 3 }}
+      >
+        <Toolbar />
 
-            { children }
-            
-        </Box>
+        {children}
+
+      </Box>
     </Box>
   )
 }
